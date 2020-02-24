@@ -3,7 +3,9 @@ title: "A Title"
 subtitle: "A Subtitle"
 author: "Mickaël Canouil, *Ph.D.*"
 date: '`r format(Sys.time(), "%B %d, %Y")`'
-output: mctemplates::ioslides_presentation
+output: 
+  mctemplates::ioslides_presentation:
+    logo: rlille_rconsortium_textwhite.png
 ---
 
 ```{r setup, include = FALSE}

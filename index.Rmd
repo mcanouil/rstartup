@@ -1,0 +1,61 @@
+---
+title: "A Title"
+subtitle: "A Subtitle"
+author: "Mickaël Canouil, *Ph.D.*"
+date: '`r format(Sys.time(), "%B %d, %Y")`'
+output: mctemplates::ioslides_presentation
+---
+
+```{r setup, include = FALSE}
+options(
+  stringsAsFactors = FALSE,
+  width = 80,
+  kableExtra.html.bsTable = TRUE
+)
+
+### Load packages and functions
+library(tidyverse)
+library(knitr)
+library(rmarkdown)
+library(kableExtra)
+
+### Set knitr rmarkdown chunk options
+opts_chunk$set(
+  include = TRUE,
+  echo = FALSE,
+  warning = FALSE,
+  message = FALSE,
+  eval = TRUE,
+  tidy = FALSE,
+  crop = TRUE,
+  autodep = FALSE,
+  dpi = 120,
+  width = getOption("width"),
+  results = "asis",
+  comment = "#>",
+  fig.align = "center",
+  fig.path = "images/"
+)
+```
+
+# Title | Subtitle {.flexbox .vcenter}
+
+
+## Title 1 | Title 2
+
+
+# <img src="https://avatars1.githubusercontent.com/u/8896044?s=460&v=4" height = "150px" id = "picture"></img> {.flexbox .vcenter}
+
+<div class="columns-2 auto-fadein">
+  <a id="social" href="" target="_blank"><i class="fas fa-phone"></i> +33 (0) 374 00 81 29</a> 
+    
+  <a id="social" href="mailto:mickael.canouil@cnrs.fr" target="_blank"><i class="fas fa-envelope"></i> mickael.canouil@cnrs.fr</a> 
+
+  <a id="social" href="http://mickael.canouil.fr" target="_blank"><i class="fas fa-home"></i> mickael.canouil.fr</a> 
+
+  <a id="social" href="https://www.linkedin.com/in/mickael-canouil" target="_blank"><i class="fab fa-linkedin"></i> mickael-canouil</a> 
+
+  <a id="social" href="https://github.com/mcanouil" target="_blank"><i class="fab fa-github"></i> mcanouil</a> 
+
+  <a id="social" href="https://twitter.com/mickaelcanouil" target="_blank"><i class="fab fa-twitter"></i> @mickaelcanouil</a>
+</div>

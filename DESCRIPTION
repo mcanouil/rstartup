@@ -1,5 +1,5 @@
-Package:  rstartup
-Title: rstartup
+Package: rstartup
+Title: Tips to start working with R
 Version: 0.0.1
 Imports:
     tidyverse,

@@ -1,5 +1,5 @@
 ---
-title: 'Débuter avec <i class="fab fa-r-project glow"></i>'
+title: '"Débuter" avec <i class="fab fa-r-project glow"></i>'
 subtitle: "En Commençant par le Début ..."
 author: "Mickaël Canouil, *Ph.D.*"
 date: 'Vendredi 27 Mars 2020 (MeetUp)'

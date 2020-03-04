@@ -1,13 +1,13 @@
 ---
-title: '<i class="fab fa-r-project"></i> - Startup'
-subtitle: "Tips to start working with R"
+title: 'Débuter avec <i class="fab fa-r-project glow"></i>'
+subtitle: "En Commençant par le Début ..."
 author: "Mickaël Canouil, *Ph.D.*"
-date: '`r format(Sys.time(), "%B %d, %Y")`'
+date: 'Vendredi 27 Mars 2020 (MeetUp)'
 knit: (function(inputFile, encoding) {
   rmarkdown::render(inputFile, encoding = encoding, output_dir = "docs") })
 output: 
   mctemplates::ioslides_presentation:
-    logo: rlille_rconsortium_textwhite.png
+    logo: images/rlille_rconsortium_textwhite.png
 ---
 
 ```{r setup, include = FALSE}
@@ -22,6 +22,8 @@ library(tidyverse)
 library(knitr)
 library(rmarkdown)
 library(kableExtra)
+library(here)
+# library(carbonate)
 
 ### Set knitr rmarkdown chunk options
 opts_chunk$set(
@@ -42,11 +44,293 @@ opts_chunk$set(
 )
 ```
 
-# Title | Subtitle {.flexbox .vcenter}
+## <i class="fab fa-r-project"></i> ([Thomas Lin Pedersen <i class="fab fa-twitter"></i>](https://twitter.com/thomasp85/status/961553618196418560))
 
+```{r, out.width = "100%"}
+include_graphics(here("images", "R-startup.svg"))
+```
 
-## Title 1 | Title 2
+## <i class="fab fa-r-project"></i> ([Thomas Lin Pedersen <i class="fab fa-twitter"></i>](https://twitter.com/thomasp85/status/961553618196418560)) {.flexbox .vcenter}
 
+`r include_graphics(here("images", "shocked-face-with-exploding-head_1f92f.png"))`
+
+## <i class="fab fa-r-project"></i> ([Thomas Lin Pedersen <i class="fab fa-twitter"></i>](https://twitter.com/thomasp85/status/961553618196418560))
+
+```{r, out.width = "100%"}
+include_graphics(here("images", "R-startup-all.svg"))
+```
+
+# Sauvegarder</br>le code</br>...</br>pas l'environnement !
+
+## Sauvegarder le code
+
+Les scripts :
+ 
+* "*standards*" dans un fichier `.R`
+
+* "*Rmarkdown*" dans un fichier `.Rmd`
+
+Les "données" :
+
+* un objet dans un `.rds`
+
+* une liste d'objet dans un `.Rdata`
+
+# Utiliser un IDE | `r include_graphics(here("images", "nerd-face_1f913.png"))`</br>("Integrated Development Environment")
+
+## Utiliser un IDE
+
+* RStudio :  
+    https://www.rstudio.com/products/rstudio/download/#download
+
+* Emacs + ESS :  
+    https://ess.r-project.org
+
+* vim + Nvim-R :  
+    https://medium.com/@kadek/turning-vim-into-an-r-ide-cd9602e8c217
+
+* Visual Studio + RTVS :  
+    https://docs.microsoft.com/en-us/visualstudio/rtvs
+    
+# Faire</br>*Table Rase*</br>à</br>Chaque Démarrage !
+
+## Faire *table rase* à chaque démarrage !
+
+```{r}
+include_graphics(here("images", "R-startup-session.svg"))
+```
+
+## Faire *table rase* à chaque démarrage !
+
+```{r}
+include_graphics(here("images", "R-startup-session-zoom.svg"))
+```
+
+## Faire *table rase* à chaque démarrage !
+
+Lorsque vous quittez <i class="fab fa-r-project"></i> :
+
+* Ne pas enregistrer votre espace de travail (*workspace*<sup>\*</sup>)&nbsp;!
+
+Lorsque vous démarrez <i class="fab fa-r-project"></i> :
+
+* Ne pas charger l'espace de travail sauvegardé précédemment&nbsp;!
+
+<sup>\*</sup> Le *workspace* est automatiquement sauvegardé/chargé via un fichier nommé `.Rdata` (là où s'execute <i class="fab fa-r-project"></i>).
+
+## Faire *table rase* ! | Dans Windows
+
+```{r, out.width = "50%"}
+include_graphics(here("images", "rwindows.png"))
+```
+
+## Faire *table rase* ! | Dans RStudio (*Tools > Global options*)
+
+```{r, out.width = "55%"}
+include_graphics(here("images", "rstudio.png"))
+```
+
+## Faire *table rase* ! {.columns-2}
+
+### Dans un Terminal
+
+```{r, eval = FALSE}
+x <- carbon$new("R --no-save --no-restore-data")
+x$template <- "cobalt"
+x$carbonate(file = here("images", "terminal.svg"))
+x$stop_all()
+# x$uri()
+```
+```{r}
+include_graphics(here("images", "terminal.svg"))
+```
+
+### `.bash_profile`
+
+```{r, eval = FALSE}
+x <- carbon$new("alias R='R --no-save --no-restore-data'")
+x$template <- "cobalt"
+x$carbonate(file = here("images", "bash_profile.svg"))
+x$stop_all()
+# x$uri()
+```
+
+```{r}
+include_graphics(here("images", "bash_profile.svg"))
+```
+
+# Comment Réinitialiser <i class="fab fa-r-project"></i> ? | `r include_graphics(here("images", "thinking-face_1f914.png"))`
+
+# Avec</br>`rm(list = ls())`</br>?
+
+# Avec</br>`rm(list = ls())`</br>? | `r include_graphics(here("images", "face-screaming-in-fear_1f631.png"))`
+
+## Que ne fait pas `rm(list = ls())` ?
+
+* Réinitialiser la session <i class="fab fa-r-project"></i> en cours
+
+* Réinitialiser les `options()`  
+    &#x2192; `options(stringsAsFactors = FALSE)`<sup>*</sup>
+
+* Réinitialiser le répertoire de travail  
+    `getwd()` &#x2192; `setwd()`
+
+* Réinitialiser les extensions <i class="fab fa-r-project"></i> attachées
+
+<sup>\*</sup>En passe de devenir la valeur par défaut pour la prochaine itération de <i class="fab fa-r-project"></i> ([Kurt Hornik: stringsAsFactors](https://developer.r-project.org/Blog/public/2020/02/16/stringsasfactors/)).
+
+## Mais alors que fait `rm(list = ls())` ?
+
+```{r, eval = FALSE, echo = TRUE}
+help(rm)
+```
+
+```{r, out.width = "100%"}
+include_graphics(here("images", "rm-doc.png"))
+```
+
+# Comment réinitialiser <i class="fab fa-r-project"></i> ? | `r include_graphics(here("images", "thinking-face_1f914.png"))`
+
+# Redémarrer <i class="fab fa-r-project"></i> ! | `r include_graphics(here("images", "grinning-face-with-one-large-and-one-small-eye_1f92a.png"))`
+
+## Réinitialiser <i class="fab fa-r-project"></i>
+
+* Dans une console <i class="fab fa-r-project"></i>
+    * Via le raccourci `Ctrl+D` 
+    * Via la fonction `q()` dans une console <i class="fab fa-r-project"></i>
+
+## Réinitialiser <i class="fab fa-r-project"></i>
+
+* Dans RStudio :
+    * Via le raccourci `Ctrl+Shift+F10`
+    * Via le menu  
+        ```{r, out.width = "75%"}
+        include_graphics(here("images", "restartr.png"))
+        ```
+        
+# Démarrage de <i class="fab fa-r-project"></i> | `.Renviron` & `.Rprofile`
+
+## `.Renviron` & `.Rprofile`
+
+* `.Renviron` - contient des variables d'environnement
+* `.Rprofile` - contient du code <i class="fab fa-r-project"></i>
+
+```{r, out.width = "70%"}
+include_graphics(here("images", "R-startup-dotfiles.svg"))
+```
+
+## `.Renviron`
+
+* `.Renviron` - contient des variables d'environnement
+
+```{r}
+include_graphics(here("images", "R-startup-environ-zoom.svg"))
+```
+
+## `.Renviron`
+
+* `.Renviron` - contient des variables d'environnement
+
+```{r, echo = TRUE, eval = FALSE}
+R_MAX_NUM_DLLS=300
+GITHUB_PAT=abc123
+TZ='Etc/UTC'
+R_LIBS_USER=~/R/%p/%v
+```
+
+La variable `R_PROFILE_USER` permet de définir à partir de quel répertoire le `.Rprofile` est chargé.
+```{r, echo = TRUE, eval = FALSE}
+R_PROFILE_USER=~/.Rprofile # Par défaut
+```
+
+## `.Rprofile`
+
+```{r}
+include_graphics(here("images", "R-startup-dotfiles.svg"))
+```
+
+## `.Rprofile`
+
+```{r}
+include_graphics(here("images", "R-startup-profile-zoom.svg"))
+```
+
+## Peut-on mettre tout dans `.Rprofile` ?
+
+* Définir un dépôt CRAN
+* Écrire un message d'accueil
+* Personnaliser l'invite de commandes
+* Modifier les options d'affichage (*p.ex.*, largeur en nombre de caractères `options(width = 120)`)
+* Charger des extensions <i class="fab fa-r-project"></i> fréquemment utilisées
+* Ajouter des raccourcis et/ou alias à des fonctions
+* ...
+
+<p class="centered" style="font-size:3em;">Mais, **ATTENTION** !</p>
+
+## `.Rprofile` et reproductibilité
+
+Ce qui figure dans le fichier `.Rprofile` :
+
+* Ne doit avoir aucune incidence sur un script `.R` ou `.Rmd`
+* A pour objectif d'être utilisé uniquement de façon interactive (directement dans la console)
+
+```{r}
+options(repos = c(CRAN = "https://cran.rstudio.org"))
+
+if (interactive()) {
+  options(width = 120)
+}
+```
+
+## `.Rprofile` et reproductibilité
+
+```{r, out.width = "70%"}
+include_graphics(here("images", "R-startup-profile.svg"))
+```
+
+Le `.Rprofile` est chargé dans l'environnement à chaque execution d'un processus R (`Rscript` et `R`).
+
+## Mon `.Rprofile` ([GitHub](https://gist.github.com/mcanouil/59bf911b3e780847d60524774b27fc58))
+
+```{r, eval = FALSE}
+x <- carbon$new(readLines("https://gist.githubusercontent.com/mcanouil/59bf911b3e780847d60524774b27fc58/raw/12bd198e14569aa83e46ea89c8597565404be67d/.Rprofile"))
+x$template <- "cobalt"
+x$carbonate(file = here("images", "Rprofile.svg"))
+x$stop_all()
+# x$uri()
+```
+```{r, fig.show = "hold", out.width = "49%", out.height = "428px", out.extra = 'style="display: inline;"'}
+include_graphics(c(here("images", "Rprofile.svg"), here("images", "Rprofile.png")))
+```
+
+## Désactiver les fichiers de démarrage
+
+* `--vanilla` - pour désactiver le chargement de **tous les fichiers** de démarrage
+
+* `--no-init-file` - pour désactiver le chargement du fichier `.Rprofile`
+
+* `--no-environ` - pour désactiver le chargement du fichier `.Renviron`
+
+# Utiliser un Mode "Projet" | `r include_graphics(here("images", "face-with-uneven-eyes-and-wavy-mouth_1f974.png"))`</br>(Voir "[Project-oriented workflow](https://rstats.wtf/project-oriented-workflow.html#dilemma-and-a-solution)")
+
+# {.flexbox .vcenter}
+
+<div class="auto-fadein" style="color:white;">
+* ["Code Smells and Feels"](https://www.youtube.com/watch?v=7oyiPBjLAWY)  
+    -- Jennifer (Jenny) Bryan
+
+* ["Advanced R"](https://adv-r.hadley.nz/)  
+    -- Hadley Wickham
+
+* ["Project-oriented Workflow"](https://www.tidyverse.org/articles/2017/12/workflow-vs-script/)  
+    -- Jennifer (Jenny) Bryan
+
+* ["R for Data Science"](https://r4ds.had.co.nz/)  
+    -- Garrett Grolemund & Hadley Wickham
+
+* ["What They Forgot to Teach You About R"](https://rstats.wtf/)  
+    -- Jennifer (Jenny) Bryan & Jim Hester
+</div>
 
 # <img src="https://avatars1.githubusercontent.com/u/8896044?s=460&v=4" height = "150px" id = "picture"></img> {.flexbox .vcenter}
 

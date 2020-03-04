@@ -311,7 +311,14 @@ include_graphics(c(here("images", "Rprofile.svg"), here("images", "Rprofile.png"
 
 * `--no-environ` - pour désactiver le chargement du fichier `.Renviron`
 
-# Utiliser un Mode "Projet" | `r include_graphics(here("images", "face-with-uneven-eyes-and-wavy-mouth_1f974.png"))`</br>(Voir "[Project-oriented workflow](https://rstats.wtf/project-oriented-workflow.html#dilemma-and-a-solution)")
+# Utiliser un Mode "Projet" | `r include_graphics(here("images", "face-with-uneven-eyes-and-wavy-mouth_1f974.png"))`
+
+## Utiliser un Mode "Projet"
+
+En cours ...
+<!-- 
+"[Project-oriented workflow](https://rstats.wtf/project-oriented-workflow.html#dilemma-and-a-solution)")
+-->
 
 # {.flexbox .vcenter}
 

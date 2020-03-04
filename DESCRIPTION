@@ -1,10 +1,13 @@
 Package: rstartup
-Title: Tips to start working with R
+Title: Débuter avec R en Commençant par le Début ...
 Version: 0.0.1
 Imports:
     tidyverse,
     rmarkdown,
     knitr,
-    kableExtra
+    kableExtra,
+    here
+Suggests:
+    carbonate
 URL: https://github.com/mcanouil/rstartup
 BugReports: https://github.com/mcanouil/rstartup/issues

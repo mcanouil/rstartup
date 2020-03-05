@@ -293,7 +293,7 @@ Le `.Rprofile` est chargé dans l'environnement à chaque execution d'un process
 ## Mon `.Rprofile` ([GitHub](https://gist.github.com/mcanouil/59bf911b3e780847d60524774b27fc58))
 
 ```{r, eval = FALSE}
-x <- carbon$new(readLines("https://gist.githubusercontent.com/mcanouil/59bf911b3e780847d60524774b27fc58/raw/12bd198e14569aa83e46ea89c8597565404be67d/.Rprofile"))
+x <- carbon$new(readLines("https://gist.githubusercontent.com/mcanouil/59bf911b3e780847d60524774b27fc58/raw/8546e828768cc573d5a2608a5d15d41d22e269f4/.Rprofile"))
 x$template <- "cobalt"
 x$carbonate(file = here("images", "Rprofile.svg"))
 x$stop_all()

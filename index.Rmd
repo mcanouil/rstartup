@@ -2,13 +2,26 @@
 title: '"Débuter" avec <i class="fab fa-r-project glow"></i>'
 subtitle: "En Commençant par le Début ..."
 author: "Mickaël Canouil, *Ph.D.*"
-date: 'Vendredi 27 Mars 2020 (MeetUp)'
-knit: (function(inputFile, encoding) {
-  rmarkdown::render(inputFile, encoding = encoding, output_dir = "docs") })
+date: 'Mercredi 7 Octobre 2020 (MeetUp)'
+knit: (function(inputFile, encoding) { rmarkdown::render(inputFile, encoding = encoding, output_dir = "docs") })
 output: 
   mctemplates::ioslides_presentation:
     logo: images/rlille_rconsortium_textwhite.png
+    wide: true
 ---
+
+<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css"/>
+
+<style>
+blockquote {
+  background: #333333;
+  color: #ffffff;
+  font-style: italic;
+  border-left: 5px solid #fafafa;
+  margin: 1.5em 10px;
+  padding: 0.5em 1em;
+}
+</style>
 
 ```{r setup, include = FALSE}
 options(
@@ -87,7 +100,7 @@ Les "données" :
     https://ess.r-project.org
 
 * vim + Nvim-R :  
-    https://medium.com/@kadek/turning-vim-into-an-r-ide-cd9602e8c217
+    https://medium.com/free-code-camp/turning-vim-into-an-r-ide-cd9602e8c217
 
 * Visual Studio + RTVS :  
     https://docs.microsoft.com/en-us/visualstudio/rtvs
@@ -120,13 +133,13 @@ Lorsque vous démarrez <i class="fab fa-r-project"></i> :
 
 ## Faire *table rase* ! | Dans Windows
 
-```{r, out.width = "50%"}
+```{r, out.width = "", out.height = "425px"}
 include_graphics(here("images", "rwindows.png"))
 ```
 
 ## Faire *table rase* ! | Dans RStudio (*Tools > Global options*)
 
-```{r, out.width = "55%"}
+```{r, out.width = "", out.height = "425px"}
 include_graphics(here("images", "rstudio.png"))
 ```
 
@@ -193,6 +206,16 @@ include_graphics(here("images", "rm-doc.png"))
 
 # Redémarrer <i class="fab fa-r-project"></i> ! | `r include_graphics(here("images", "grinning-face-with-one-large-and-one-small-eye_1f92a.png"))`
 
+# {.flexbox .vcenter}
+
+> If the first line of your R script is
+> 
+> `rm(list = ls())`
+> 
+> I will come into your office and SET YOUR COMPUTER ON FIRE 🔥.
+> 
+> --- Jenny Bryan
+
 ## Réinitialiser <i class="fab fa-r-project"></i>
 
 * Dans une console <i class="fab fa-r-project"></i>
@@ -204,7 +227,7 @@ include_graphics(here("images", "rm-doc.png"))
 * Dans RStudio :
     * Via le raccourci `Ctrl+Shift+F10`
     * Via le menu  
-        ```{r, out.width = "75%"}
+        ```{r, out.width = "", out.height = "375px"}
         include_graphics(here("images", "restartr.png"))
         ```
         
@@ -215,7 +238,7 @@ include_graphics(here("images", "rm-doc.png"))
 * `.Renviron` - contient des variables d'environnement
 * `.Rprofile` - contient du code <i class="fab fa-r-project"></i>
 
-```{r, out.width = "70%"}
+```{r, out.width = "", out.height = "400px"}
 include_graphics(here("images", "R-startup-dotfiles.svg"))
 ```
 
@@ -284,7 +307,7 @@ if (interactive()) {
 
 ## `.Rprofile` et reproductibilité
 
-```{r, out.width = "70%"}
+```{r, out.width = "", out.height = "400px"}
 include_graphics(here("images", "R-startup-profile.svg"))
 ```
 
@@ -313,9 +336,16 @@ include_graphics(c(here("images", "Rprofile.svg"), here("images", "Rprofile.png"
 
 # Utiliser un Mode "Projet" | `r include_graphics(here("images", "face-with-uneven-eyes-and-wavy-mouth_1f974.png"))`
 
-## Utiliser un Mode "Projet"
+# {.flexbox .vcenter}
 
-En cours ...
+> If the first line of your R script is
+> 
+> `setwd("C:\Users\jenny\path\that\only\I\have")`
+> 
+> I will come into your office and SET YOUR COMPUTER ON FIRE 🔥.
+> 
+> --- Jenny Bryan
+
 <!-- 
 "[Project-oriented workflow](https://rstats.wtf/project-oriented-workflow.html#dilemma-and-a-solution)")
 -->

@@ -169,7 +169,15 @@ include_graphics(here("images", "bash_profile.svg"))
 
 # Avec</br>`rm(list = ls())`</br>?
 
-# Avec</br>`rm(list = ls())`</br>? | `r include_graphics(here("images", "face-screaming-in-fear_1f631.png"))`
+# `r include_graphics(here("images", "face-screaming-in-fear_1f631.png"))` {.flexbox .vcenter}
+
+> If the first line of your R script is
+> 
+> `rm(list = ls())`
+> 
+> I will come into your office and SET YOUR COMPUTER ON FIRE 🔥.
+> 
+> --- Jenny Bryan
 
 ## Que ne fait pas `rm(list = ls())` ?
 
@@ -183,7 +191,7 @@ include_graphics(here("images", "bash_profile.svg"))
 
 * Réinitialiser les extensions <i class="fab fa-r-project"></i> attachées
 
-<sup>\*</sup>En passe de devenir la valeur par défaut pour la prochaine itération de <i class="fab fa-r-project"></i> ([Kurt Hornik: stringsAsFactors](https://developer.r-project.org/Blog/public/2020/02/16/stringsasfactors/)).
+<sup>\*</sup>Valeur par défaut <i class="fab fa-r-project"></i> v4.0.0 ([Kurt Hornik: stringsAsFactors](https://developer.r-project.org/Blog/public/2020/02/16/stringsasfactors/)).
 
 ## Mais alors que fait `rm(list = ls())` ?
 
@@ -198,16 +206,6 @@ include_graphics(here("images", "rm-doc.png"))
 # Comment réinitialiser <i class="fab fa-r-project"></i> ? | `r include_graphics(here("images", "thinking-face_1f914.png"))`
 
 # Redémarrer <i class="fab fa-r-project"></i> ! | `r include_graphics(here("images", "grinning-face-with-one-large-and-one-small-eye_1f92a.png"))`
-
-# {.flexbox .vcenter}
-
-> If the first line of your R script is
-> 
-> `rm(list = ls())`
-> 
-> I will come into your office and SET YOUR COMPUTER ON FIRE 🔥.
-> 
-> --- Jenny Bryan
 
 ## Réinitialiser <i class="fab fa-r-project"></i>
 
@@ -306,17 +304,10 @@ include_graphics(here("images", "R-startup-profile.svg"))
 
 Le `.Rprofile` est chargé dans l'environnement à chaque execution d'un processus R (`Rscript` et `R`).
 
-## Mon `.Rprofile` ([GitHub](https://gist.github.com/mcanouil/59bf911b3e780847d60524774b27fc58))
+## Mon `.Rprofile` ([GitHub](https://github.com/mcanouil/mctemplates/blob/master/R/rprofile.R))
 
-```{r, eval = FALSE}
-x <- carbon$new(readLines("https://gist.githubusercontent.com/mcanouil/59bf911b3e780847d60524774b27fc58/raw/8546e828768cc573d5a2608a5d15d41d22e269f4/.Rprofile"))
-x$template <- "cobalt"
-x$carbonate(file = here("images", "Rprofile.svg"))
-x$stop_all()
-# x$uri()
-```
-```{r, fig.show = "hold", out.width = "49%", out.height = "428px", out.extra = 'style="display: inline;"'}
-include_graphics(c(here("images", "Rprofile.svg"), here("images", "Rprofile.png")))
+```{r, fig.show = "hold", out.width = "49%", out.height = "", out.extra = 'style="display: inline;vertical-align: middle;"'}
+include_graphics(c(here("images", "Rprofile_code.png"), here("images", "Rprofile_console.png")))
 ```
 
 ## Désactiver les fichiers de démarrage
@@ -327,9 +318,7 @@ include_graphics(c(here("images", "Rprofile.svg"), here("images", "Rprofile.png"
 
 * `--no-environ` - pour désactiver le chargement du fichier `.Renviron`
 
-# Utiliser un Mode "Projet" | `r include_graphics(here("images", "face-with-uneven-eyes-and-wavy-mouth_1f974.png"))`
-
-# {.flexbox .vcenter}
+# `r include_graphics(here("images", "face-screaming-in-fear_1f631.png"))` {.flexbox .vcenter}
 
 > If the first line of your R script is
 > 
@@ -339,11 +328,93 @@ include_graphics(c(here("images", "Rprofile.svg"), here("images", "Rprofile.png"
 > 
 > --- Jenny Bryan
 
-<!-- 
-"[Project-oriented workflow](https://rstats.wtf/project-oriented-workflow.html#dilemma-and-a-solution)")
--->
+# Faisons le Point sur `setwd()` ! | `r include_graphics(here("images", "face-with-uneven-eyes-and-wavy-mouth_1f974.png"))`
 
-# {.flexbox .vcenter}
+## Faisons le Point sur `setwd()` !
+
+```{r, echo = TRUE, eval = FALSE}
+library(ggplot2)
+
+### <b>
+setwd("/path/to/a/directory/on/my/laptop/data")
+### </b>
+
+### <b>
+df <- read.delim("data.csv")
+### </b>
+
+p <- ggplot(df, aes(x, y)) + geom_point()
+
+### <b>
+ggsave("../figs/scatterplot.png")
+### </b>
+```
+
+## Faisons le Point sur `setwd()` !
+
+```{r, echo = TRUE, eval = FALSE}
+library(ggplot2)
+
+### <b>
+setwd("/path/to/a/directory/on/my/laptop/data")
+### </b>
+
+### <b>
+df <- read.delim("data.csv")
+### </b>
+
+p <- ggplot(df, aes(x, y)) + geom_point()
+
+### <b>
+setwd("/path/to/a/directory/on/my/laptop/figs")
+### </b>
+
+### <b>
+ggsave("scatterplot.png")
+### </b>
+```
+
+## Faisons le Point sur `setwd()` !
+
+```{r, echo = TRUE, eval = FALSE}
+...
+
+r2resampled.a <- stack()
+
+for (j in b2000) {
+  
+  ### <b>
+  setwd(j)
+  ### </b>
+  
+  print(j)
+  
+  l2 <- list.files(path = paste(j, sep = "/"), full.names = TRUE)
+  
+  ...
+}
+
+...
+```
+
+## Utiliser un Mode "Projet" via une IDE
+
+* Démarrer un projet A :
+    1. Démarre R.
+    2. Défini le répetoire de travail de R comme la racine du projet A.
+
+* Passer d'un projet A à un project B :
+    1. Redémarre R.
+    2. Défini le répetoire de travail de R comme la racine du projet B.
+
+
+## Utiliser un Mode "Projet"
+
+* ["What They Forgot to Teach You About R"](https://rstats.wtf/project-oriented-workflow.html) --- Jenny Bryan & Jim Hester
+
+* ["Project-oriented Workflow"](https://www.tidyverse.org/articles/2017/12/workflow-vs-script/) --- Jenny Bryan
+
+# Lectures Utiles {.flexbox .vcenter}
 
 <div class="auto-fadein" style="color:white;font-size:90%;">
 * ["Code Smells and Feels"](https://www.youtube.com/watch?v=7oyiPBjLAWY) --- Jenny Bryan

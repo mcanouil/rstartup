@@ -376,25 +376,8 @@ ggsave("scatterplot.png")
 
 ## Faisons le Point sur `setwd()` !
 
-```{r, echo = TRUE, eval = FALSE}
-...
-
-r2resampled.a <- stack()
-
-for (j in b2000) {
-  
-  ### <b>
-  setwd(j)
-  ### </b>
-  
-  print(j)
-  
-  l2 <- list.files(path = paste(j, sep = "/"), full.names = TRUE)
-  
-  ...
-}
-
-...
+```{r, out.width = "100%", out.height = ""}
+include_graphics(here("images", "setwd_example.png"))
 ```
 
 ## Utiliser un Mode "Projet" via une IDE

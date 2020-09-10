@@ -10,7 +10,7 @@ output:
     wide: true
 ---
 
-<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css"/>
+<!-- <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css"/> -->
 
 <style>
 blockquote {
@@ -24,18 +24,11 @@ blockquote {
 </style>
 
 ```{r setup, include = FALSE}
-options(
-  stringsAsFactors = FALSE,
-  width = 80,
-  kableExtra.html.bsTable = TRUE
-)
+options(stringsAsFactors = FALSE, width = 80)
 
 ### Load packages and functions
-library(tidyverse)
-library(knitr)
-library(rmarkdown)
-library(kableExtra)
 library(here)
+library(knitr)
 # library(carbonate)
 
 ### Set knitr rmarkdown chunk options
@@ -352,21 +345,16 @@ include_graphics(c(here("images", "Rprofile.svg"), here("images", "Rprofile.png"
 
 # {.flexbox .vcenter}
 
-<div class="auto-fadein" style="color:white;">
-* ["Code Smells and Feels"](https://www.youtube.com/watch?v=7oyiPBjLAWY)  
-    -- Jennifer (Jenny) Bryan
+<div class="auto-fadein" style="color:white;font-size:90%;">
+* ["Code Smells and Feels"](https://www.youtube.com/watch?v=7oyiPBjLAWY) --- Jenny Bryan
 
-* ["Advanced R"](https://adv-r.hadley.nz/)  
-    -- Hadley Wickham
+* ["Advanced R"](https://adv-r.hadley.nz/) --- Hadley Wickham
 
-* ["Project-oriented Workflow"](https://www.tidyverse.org/articles/2017/12/workflow-vs-script/)  
-    -- Jennifer (Jenny) Bryan
+* ["Project-oriented Workflow"](https://www.tidyverse.org/articles/2017/12/workflow-vs-script/) --- Jenny Bryan
 
-* ["R for Data Science"](https://r4ds.had.co.nz/)  
-    -- Garrett Grolemund & Hadley Wickham
+* ["R for Data Science"](https://r4ds.had.co.nz/) --- Garrett Grolemund & Hadley Wickham
 
-* ["What They Forgot to Teach You About R"](https://rstats.wtf/)  
-    -- Jennifer (Jenny) Bryan & Jim Hester
+* ["What They Forgot to Teach You About R"](https://rstats.wtf/) --- Jenny Bryan & Jim Hester
 </div>
 
 # <img src="https://avatars1.githubusercontent.com/u/8896044?s=460&v=4" height = "150px" id = "picture"></img> {.flexbox .vcenter}

@@ -50,6 +50,18 @@ opts_chunk$set(
 )
 ```
 
+## Les débuts avec <i class="fab fa-r-project"></i>
+
+```{r, out.width = "420pt", out.height = ""}
+if (!file.exists(here("images", "r_first_ahorst.png"))) {
+  download.file(
+    url = "https://github.com/allisonhorst/stats-illustrations/raw/master/rstats-artwork/r_first_then.png", 
+    destfile = here("images", "r_first_ahorst.png")
+  )
+}
+include_graphics(here("images", "r_first_ahorst.png"))
+```
+
 ## <i class="fab fa-r-project"></i> ([Thomas Lin Pedersen <i class="fab fa-twitter"></i>](https://twitter.com/thomasp85/status/961553618196418560))
 
 ```{r, out.width = "100%"}
@@ -380,6 +392,18 @@ ggsave("scatterplot.png")
 include_graphics(here("images", "setwd_example.png"))
 ```
 
+## L'extension `here`
+
+```{r, out.width = "100%", out.height = ""}
+if (!file.exists(here("images", "here_ahorst.png"))) {
+  download.file(
+    url = "https://github.com/allisonhorst/stats-illustrations/raw/master/rstats-artwork/here.png", 
+    destfile = here("images", "here_ahorst.png")
+  )
+}
+include_graphics(here("images", "here_ahorst.png"))
+```
+
 ## Utiliser un Mode "Projet" via une IDE
 
 * Démarrer un projet A :
@@ -396,6 +420,18 @@ include_graphics(here("images", "setwd_example.png"))
 * ["What They Forgot to Teach You About R"](https://rstats.wtf/project-oriented-workflow.html) --- Jenny Bryan & Jim Hester
 
 * ["Project-oriented Workflow"](https://www.tidyverse.org/articles/2017/12/workflow-vs-script/) --- Jenny Bryan
+
+## Workflow
+
+```{r, out.width = "100%", out.height = ""}
+if (!file.exists(here("images", "workflow_ahorst.jpg"))) {
+  download.file(
+    url = "https://github.com/allisonhorst/stats-illustrations/raw/master/other-stats-artwork/workflow.jpg", 
+    destfile = here("images", "workflow_ahorst.jpg")
+  )
+}
+include_graphics(here("images", "workflow_ahorst.jpg"))
+```
 
 # Lectures Utiles {.flexbox .vcenter}
 

@@ -455,6 +455,20 @@ include_graphics(here("images", "workflow_ahorst.jpg"))
 * ["What They Forgot to Teach You About R"](https://rstats.wtf/) --- Jenny Bryan & Jim Hester
 </div>
 
+# Proposer Un Meetup <br> `r include_graphics(here("images", "rlille_small.png"))` {.flexbox .vcenter}
+
+<div class="auto-fadein" style="color:white;font-size:80%;">
+
+1. Proposer un sujet aux organisateurs du groupe R Lille.
+2. En cas de validation (très probable) :
+    * Choisir une ou plusieurs dates pour s'assurer de la présence de l'un des organisateurs.
+    * Inclure le logo R Lille et le logo R consortium  
+        (disponible sur le GitHub du groupe https://github.com/RLille/logos).
+    * Fournir un résumé et une image pour la création de l'évènement Meetup.
+
+</div>
+
+
 # <img src="https://avatars1.githubusercontent.com/u/8896044?s=460&v=4" height = "150px" id = "picture"></img> {.flexbox .vcenter}
 
 <div class="columns-2 auto-fadein">

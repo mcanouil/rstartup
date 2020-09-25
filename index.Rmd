@@ -183,6 +183,8 @@ include_graphics(here("images", "bash_profile.svg"))
 
 # `r include_graphics(here("images", "face-screaming-in-fear_1f631.png"))` {.flexbox .vcenter}
 
+<div class="auto-fadein">
+
 > If the first line of your R script is
 > 
 > `rm(list = ls())`
@@ -190,6 +192,8 @@ include_graphics(here("images", "bash_profile.svg"))
 > I will come into your office and SET YOUR COMPUTER ON FIRE 🔥.
 > 
 > --- Jenny Bryan
+
+</div>
 
 ## Que ne fait pas `rm(list = ls())` ?
 
@@ -332,6 +336,8 @@ include_graphics(c(here("images", "Rprofile_code.png"), here("images", "Rprofile
 
 # `r include_graphics(here("images", "face-screaming-in-fear_1f631.png"))` {.flexbox .vcenter}
 
+<div class="auto-fadein">
+
 > If the first line of your R script is
 > 
 > `setwd("C:\Users\jenny\path\that\only\I\have")`
@@ -339,6 +345,8 @@ include_graphics(c(here("images", "Rprofile_code.png"), here("images", "Rprofile
 > I will come into your office and SET YOUR COMPUTER ON FIRE 🔥.
 > 
 > --- Jenny Bryan
+
+</div>
 
 # Faisons le Point sur `setwd()` ! | `r include_graphics(here("images", "face-with-uneven-eyes-and-wavy-mouth_1f974.png"))`
 

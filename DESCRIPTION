@@ -12,3 +12,4 @@ Remotes:
     github::mcanouil/mctemplates
 URL: https://github.com/mcanouil/rstartup
 BugReports: https://github.com/mcanouil/rstartup/issues
+License: MIT + file LICENSE

@@ -1,0 +1,573 @@
+# Les débuts avec <i class="fab fa-r-project"></i>
+
+```{r, echo = FALSE}
+if (!file.exists(here("images", "r_first_ahorst.png"))) {
+  download.file(
+    url = "https://github.com/allisonhorst/stats-illustrations/raw/master/rstats-artwork/r_first_then.png", 
+    destfile = here("images", "r_first_ahorst.png")
+  )
+}
+```
+
+.center[<img src = "images/r_first_ahorst.png" width = "45%" />]
+
+---
+
+# <i class="fab fa-r-project"></i> 
+
+.center[<img src = "images/R-startup.svg" width = "70%" />]
+
+.footnote[
+[Thomas Lin Pedersen <i class="fab fa-twitter"></i>](https://twitter.com/thomasp85/status/961553618196418560)
+]
+
+--
+
+<img src = "images/shocked-face-with-exploding-head_1f92f.png" style = "position: absolute; top: 40%; left: 45%"/>
+
+---
+
+# <i class="fab fa-r-project"></i> 
+
+.center[<img src = "images/R-startup-all.svg" width = "70%" />]
+
+.footnote[
+[Thomas Lin Pedersen <i class="fab fa-twitter"></i>](https://twitter.com/thomasp85/status/961553618196418560)
+]
+
+---
+class: part-slide
+
+# Sauvegarder<br>le code<br>...<br>pas l'environnement !
+
+---
+
+# Sauvegarder le code
+
+.pull-left.font150[
+
+Les scripts :
+ 
+* "*standards*" dans un fichier `.R`
+
+* "*Rmarkdown*" dans un fichier `.Rmd`
+
+]
+
+.pull-right.font150[
+
+Les "données" :
+
+* un objet dans un `.rds`
+
+* une liste d'objet dans un `.Rdata`
+
+]
+
+---
+class: part-slide
+
+# Utiliser un IDE<br><img src = "images/nerd-face_1f913.png" /><br>("Integrated Development Environment")
+
+---
+
+# Utiliser un IDE
+
+.font150[
+
+* RStudio :  
+    https://www.rstudio.com/products/rstudio/download/#download
+
+* Emacs + ESS :  
+    https://ess.r-project.org
+
+* vim + Nvim-R :  
+    https://medium.com/free-code-camp/turning-vim-into-an-r-ide-cd9602e8c217
+
+* Visual Studio + RTVS :  
+    https://docs.microsoft.com/en-us/visualstudio/rtvs
+    
+]
+    
+---
+class: part-slide
+
+# Faire<br>*Table Rase*<br>à<br>Chaque Démarrage !
+
+---
+
+# Faire *table rase* à chaque démarrage !
+
+.center[<img src = "images/R-startup-session.svg" width = "70%" />]
+
+---
+
+# Faire *table rase* à chaque démarrage !
+
+.center[<img src = "images/R-startup-session-zoom.svg" />]
+
+---
+
+# Faire *table rase* à chaque démarrage !
+
+.font150[
+
+Lorsque vous quittez <i class="fab fa-r-project"></i> :
+
+* Ne pas enregistrer votre espace de travail (*workspace*<sup>&ast;</sup>)&nbsp;!
+
+Lorsque vous démarrez <i class="fab fa-r-project"></i> :
+
+* Ne pas charger l'espace de travail sauvegardé précédemment&nbsp;!
+
+]
+
+.footnote.font150[
+<sup>&ast;</sup> Le *workspace* est automatiquement sauvegardé/chargé via un fichier nommé `.Rdata` (là où s'execute <i class="fab fa-r-project"></i>).
+]
+
+---
+
+# Faire *table rase* ! Dans Windows
+
+.center[<img src = "images/rwindows.png" />]
+
+---
+
+# Faire *table rase* ! Dans RStudio (*Tools > Global options*)
+
+.center[<img src = "images/rstudio.png" />]
+
+---
+
+# Faire *table rase* !
+
+.pull-left.font150[
++ Dans un Terminal
+
+.center[<img src = "images/terminal.svg" />]
+
+]
+
+.pull-right.font150[
++ `.bash_profile`
+
+```{r, echo = FALSE, eval = FALSE}
+x <- carbon$new("alias R='R --no-save --no-restore-data'")
+x$template <- "cobalt"
+x$carbonate(file = here("images", "bash_profile.svg"))
+x$stop_all()
+# x$uri()
+```
+
+.center[<img src = "images/bash_profile.svg" />]
+
+]
+
+---
+class: part-slide
+
+#  Comment Réinitialiser <i class="fab fa-r-project"></i> ?<br><img src = "images/thinking-face_1f914.png" />
+
+---
+class: part-slide
+
+# Avec<br>`rm(list = ls())`<br>?
+
+---
+
+# Avec `rm(list = ls())`?
+
+.center[<img src = "images/face-screaming-in-fear_1f631.png" />]
+
+.font150[
+
+> If the first line of your R script is
+> 
+> `rm(list = ls())`
+> 
+> I will come into your office and SET YOUR COMPUTER ON FIRE 🔥.
+> 
+> --- Jenny Bryan
+
+]
+
+---
+
+# Que ne fait pas `rm(list = ls())` ?
+
+.font150[
+
+* Réinitialiser la session <i class="fab fa-r-project"></i> en cours
+
+* Réinitialiser les `options()`  
+    &#x2192; `options(stringsAsFactors = FALSE)`<sup>&ast;</sup>
+
+* Réinitialiser le répertoire de travail  
+    `getwd()` &#x2192; `setwd()`
+
+* Réinitialiser les extensions <i class="fab fa-r-project"></i> attachées
+
+]
+
+.footnote.font150[
+<sup>&ast;</sup>Valeur par défaut <i class="fab fa-r-project"></i> v4.0.0 ([Kurt Hornik: stringsAsFactors](https://developer.r-project.org/Blog/public/2020/02/16/stringsasfactors/)).
+]
+
+---
+
+# Mais alors que fait `rm(list = ls())` ?
+
+```{r, eval = FALSE, echo = TRUE}
+help(rm)
+```
+
+.center[<img src = "images/rm-doc.png" />]
+
+---
+class: part-slide
+
+# Comment réinitialiser <i class="fab fa-r-project"></i> ?<br><img src = "images/thinking-face_1f914.png" />
+
+---
+class: part-slide
+
+# Redémarrer <i class="fab fa-r-project"></i> !<br><img src = "images/grinning-face-with-one-large-and-one-small-eye_1f92a.png" />
+
+---
+
+# Réinitialiser <i class="fab fa-r-project"></i>
+
+.font150[
+
+* Dans une console <i class="fab fa-r-project"></i>
+
+    * Via le raccourci `Ctrl+D` 
+    
+    * Via la fonction `q()` dans une console <i class="fab fa-r-project"></i>
+    
+]
+
+---
+
+# Réinitialiser <i class="fab fa-r-project"></i>
+
+.pull-left.font150[
+
+* Dans RStudio :
+
+    * Via le raccourci `Ctrl+Shift+F10`
+    
+    * Via le menu
+]
+
+.pull-right[
+  .center[<img src = "images/restartr.png" />]
+]
+        
+---
+class: part-slide
+
+# Démarrage de <i class="fab fa-r-project"></i><br>`.Renviron` & `.Rprofile`
+
+---
+
+# `.Renviron` & `.Rprofile`
+
+* `.Renviron` - contient des variables d'environnement
+
+* `.Rprofile` - contient du code <i class="fab fa-r-project"></i>
+
+.center[<img src = "images/R-startup-dotfiles.svg" width = "60%" />]
+
+---
+
+# `.Renviron`
+
+* `.Renviron` - contient des variables d'environnement
+
+.center[<img src = "images/R-startup-environ-zoom.svg" />]
+
+---
+
+# `.Renviron`
+
+* `.Renviron` - contient des variables d'environnement
+
+```{r, echo = TRUE, eval = FALSE}
+R_MAX_NUM_DLLS=300
+GITHUB_PAT=abc123
+TZ='Etc/UTC'
+R_LIBS_USER=~/R/%p/%v
+```
+
+La variable `R_PROFILE_USER` permet de définir à partir de quel répertoire le `.Rprofile` est chargé.
+
+```{r, echo = TRUE, eval = FALSE}
+R_PROFILE_USER=~/.Rprofile # Par défaut
+```
+
+---
+
+# `.Rprofile`
+
+.center[<img src = "images/R-startup-dotfiles.svg"  width = "70%" />]
+
+---
+
+# `.Rprofile`
+
+.center[<img src = "images/R-startup-profile-zoom.svg" />]
+
+---
+
+# Peut-on mettre tout dans `.Rprofile` ?
+
+.font120[
+
+* Définir un dépôt CRAN
+
+* Écrire un message d'accueil
+
+* Personnaliser l'invite de commandes
+
+* Modifier les options d'affichage (*p.ex.*, largeur en nombre de caractères `options(width = 120)`)
+
+* Charger des extensions <i class="fab fa-r-project"></i> fréquemment utilisées
+
+* Ajouter des raccourcis et/ou alias à des fonctions
+
+* ...
+
+]
+
+.center.font150[Mais, **ATTENTION** !]
+
+---
+
+# `.Rprofile` et reproductibilité
+
+.font150[
+
+Ce qui figure dans le fichier `.Rprofile` :
+
+* Ne doit avoir aucune incidence sur un script `.R` ou `.Rmd`
+
+* A pour objectif d'être utilisé uniquement de façon interactive (directement dans la console)
+
+]
+
+```{r}
+options(repos = c(CRAN = "https://cran.rstudio.org"))
+
+if (interactive()) {
+  options(width = 120)
+}
+```
+
+---
+
+# `.Rprofile` et reproductibilité
+
+.center[<img src = "images/R-startup-profile.svg" width = "70%" />]
+
+Le `.Rprofile` est chargé dans l'environnement à chaque execution d'un processus R (`Rscript` et `R`).
+
+---
+
+# Mon `.Rprofile`
+
+.pull-left[
+.center[<img src = "images/Rprofile_code.png" width = "100%" />]
+]
+
+.pull-right[
+.center[<img src = "images/Rprofile_console.png" width = "95%" />]
+]
+
+.footnote[
+[<i class = "fab fa-github"></i> GitHub](https://github.com/mcanouil/mctemplates/blob/master/R/rprofile.R)
+]
+
+---
+
+# Désactiver les fichiers de démarrage
+
+.font150[
+
+* `--vanilla` - pour désactiver le chargement de **tous les fichiers** de démarrage
+
+* `--no-init-file` - pour désactiver le chargement du fichier `.Rprofile`
+
+* `--no-environ` - pour désactiver le chargement du fichier `.Renviron`
+
+]
+
+---
+class: part-slide
+
+#  `setwd(...)` en première ligne ...
+
+---
+
+#  `setwd(...)` en première ligne ...
+
+.center[<img src = "images/face-screaming-in-fear_1f631.png" />]
+
+.font150[
+
+> If the first line of your R script is
+> 
+> `setwd("C:\Users\jenny\path\that\only\I\have")`
+> 
+> I will come into your office and SET YOUR COMPUTER ON FIRE 🔥.
+> 
+> --- Jenny Bryan
+
+]
+
+---
+class: part-slide
+
+# Faisons le Point sur `setwd()` !<br><img src = "images/face-with-uneven-eyes-and-wavy-mouth_1f974.png" />
+
+---
+
+# Faisons le Point sur `setwd()` !
+
+.code150[
+
+```{r, echo = TRUE, eval = FALSE}
+library(ggplot2)
+
+setwd("/path/to/a/directory/on/my/laptop/data")
+
+df <- read.delim("data.csv")
+
+p <- ggplot(df, aes(x, y)) + geom_point()
+
+ggsave("../figs/scatterplot.png")
+```
+
+]
+
+---
+
+# Faisons le Point sur `setwd()` !
+
+.code150[
+
+```{r, echo = TRUE, eval = FALSE}
+library(ggplot2)
+
+setwd("/path/to/a/directory/on/my/laptop/data")
+
+df <- read.delim("data.csv")
+
+p <- ggplot(df, aes(x, y)) + geom_point()
+
+setwd("/path/to/a/directory/on/my/laptop/figs")
+
+ggsave("scatterplot.png")
+```
+
+]
+
+---
+
+# Faisons le Point sur `setwd()` !
+
+.center[<img src = "images/setwd_example.png" width = "80%" />]
+
+---
+
+# L'extension <i class = "fab fa-r-project"></i> `here`
+
+```{r, echo = FALSE}
+if (!file.exists(here("images", "here_ahorst.png"))) {
+  download.file(
+    url = "https://github.com/allisonhorst/stats-illustrations/raw/master/rstats-artwork/here.png", 
+    destfile = here("images", "here_ahorst.png")
+  )
+}
+```
+
+.pull-left[
+.center[<img src = "images/here_ahorst.png" />]
+]
+
+.pull-right.code60[
+
+```{r}
+here::here()
+here::i_am("rstartup.Rmd")
+here::i_am("Rmd/content.Rmd")
+fs::dir_tree(here::here(), recurse = FALSE)
+```
+
+]
+
+---
+
+# Utiliser un Mode "Projet" via une IDE
+
+.font150[
+
+* Démarrer un projet A :
+
+    1. Démarre R.
+    
+    2. Défini le répetoire de travail de R comme la racine du projet A.
+
+* Passer d'un projet A à un project B :
+
+    1. Redémarre R.
+    
+    2. Défini le répetoire de travail de R comme la racine du projet B.
+    
+]
+
+---
+
+# Utiliser un Mode "Projet"
+
+.font150[
+
+* [__"What They Forgot to Teach You About R"__](https://rstats.wtf/project-oriented-workflow.html) --- Jenny Bryan & Jim Hester
+
+* [__"Project-oriented Workflow"__](https://www.tidyverse.org/articles/2017/12/workflow-vs-script/) --- Jenny Bryan
+
+]
+
+---
+
+# Workflow
+
+```{r, echo = FALSE}
+if (!file.exists(here("images", "workflow_ahorst.jpg"))) {
+  download.file(
+    url = "https://github.com/allisonhorst/stats-illustrations/raw/master/other-stats-artwork/workflow.jpg", 
+    destfile = here("images", "workflow_ahorst.jpg")
+  )
+}
+```
+
+.center[<img src = "images/workflow_ahorst.jpg" width = "80%"/>]
+
+---
+
+# Lectures Utiles
+
+.font150[
+
+* [__"Code Smells and Feels"__](https://www.youtube.com/watch?v=7oyiPBjLAWY) --- Jenny Bryan
+
+* [__"Advanced R"__](https://adv-r.hadley.nz/) --- Hadley Wickham
+
+* [__"Project-oriented Workflow"__](https://www.tidyverse.org/articles/2017/12/workflow-vs-script/) --- Jenny Bryan
+
+* [__"R for Data Science"__](https://r4ds.had.co.nz/) --- Garrett Grolemund & Hadley Wickham
+
+* [__"What They Forgot to Teach You About R"__](https://rstats.wtf/) --- Jenny Bryan & Jim Hester
+
+]

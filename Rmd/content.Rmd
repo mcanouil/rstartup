@@ -435,7 +435,7 @@ class: part-slide
 
 # Faisons le Point sur `setwd()` !
 
-.code150[
+.pull-left.code150[
 
 ```{r, echo = TRUE, eval = FALSE}
 library(ggplot2)
@@ -451,11 +451,7 @@ ggsave("../figs/scatterplot.png")
 
 ]
 
----
-
-# Faisons le Point sur `setwd()` !
-
-.code150[
+.pull-right.code150[
 
 ```{r, echo = TRUE, eval = FALSE}
 library(ggplot2)

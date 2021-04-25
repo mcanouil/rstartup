@@ -9,10 +9,10 @@ knit: (function(inputFile, encoding) rmarkdown::render(inputFile, encoding = enc
 output:
   xaringan::moon_reader:
     self_contained: true
-    css: [utils/default.css, utils/fonts.css]
+    css: [assets/default.css, assets/fonts.css]
     includes:
-      in_header: utils/_favicon.html
-      after_body: utils/_scripts.html
+      in_header: assets/_favicon.html
+      after_body: assets/_scripts.html
     nature:
       highlightStyle: github
       highlightLines: true
@@ -245,7 +245,7 @@ options(
 )
 ```
 
-```{r, child = "Rmd/content.Rmd"}
+```{r, child = "content/content.Rmd"}
 ```
 
 ---
@@ -255,7 +255,7 @@ class: part-slide
 
 .center[
 
-<a href = "http://m.canouil.fr" target = "_blank"><i class = "fas fa-home"></i> m.canouil.fr</a>
+<a href = "https://m.canouil.fr" target = "_blank"><i class = "fas fa-home"></i> m.canouil.fr</a>
 
 .column[
 <a href = "https://www.linkedin.com/in/mickael-canouil/" target = "_blank"><i class = "fab fa-linkedin"></i> mickael-canouil</a>

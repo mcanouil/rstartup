@@ -9,13 +9,13 @@ if (!file.exists(here("images", "r_first_ahorst.png"))) {
 }
 ```
 
-.center[<img src = "images/r_first_ahorst.png" width = "45%" />]
+.center[<img src = "content/media/r_first_ahorst.png" width = "45%" />]
 
 ---
 
 # <i class="fab fa-r-project"></i> 
 
-.center[<img src = "images/R-startup.svg" width = "70%" />]
+.center[<img src = "content/media/R-startup.svg" width = "70%" />]
 
 .footnote[
 [Thomas Lin Pedersen <i class="fab fa-twitter"></i>](https://twitter.com/thomasp85/status/961553618196418560)
@@ -23,13 +23,13 @@ if (!file.exists(here("images", "r_first_ahorst.png"))) {
 
 --
 
-<img src = "images/shocked-face-with-exploding-head_1f92f.png" style = "position: absolute; top: 40%; left: 45%"/>
+<img src = "content/media/shocked-face-with-exploding-head_1f92f.png" style = "position: absolute; top: 40%; left: 45%"/>
 
 ---
 
 # <i class="fab fa-r-project"></i> 
 
-.center[<img src = "images/R-startup-all.svg" width = "70%" />]
+.center[<img src = "content/media/R-startup-all.svg" width = "70%" />]
 
 .footnote[
 [Thomas Lin Pedersen <i class="fab fa-twitter"></i>](https://twitter.com/thomasp85/status/961553618196418560)
@@ -67,7 +67,7 @@ Les "données" :
 ---
 class: part-slide
 
-# Utiliser un IDE<br><img src = "images/nerd-face_1f913.png" /><br>("Integrated Development Environment")
+# Utiliser un IDE<br><img src = "content/media/nerd-face_1f913.png" /><br>("Integrated Development Environment")
 
 ---
 
@@ -98,13 +98,13 @@ class: part-slide
 
 # Faire *table rase* à chaque démarrage !
 
-.center[<img src = "images/R-startup-session.svg" width = "70%" />]
+.center[<img src = "content/media/R-startup-session.svg" width = "70%" />]
 
 ---
 
 # Faire *table rase* à chaque démarrage !
 
-.center[<img src = "images/R-startup-session-zoom.svg" />]
+.center[<img src = "content/media/R-startup-session-zoom.svg" />]
 
 ---
 
@@ -130,13 +130,13 @@ Lorsque vous démarrez <i class="fab fa-r-project"></i> :
 
 # Faire *table rase* ! Dans Windows
 
-.center[<img src = "images/rwindows.png" />]
+.center[<img src = "content/media/rwindows.png" />]
 
 ---
 
 # Faire *table rase* ! Dans RStudio (*Tools > Global options*)
 
-.center[<img src = "images/rstudio.png" />]
+.center[<img src = "content/media/rstudio.png" />]
 
 ---
 
@@ -145,7 +145,7 @@ Lorsque vous démarrez <i class="fab fa-r-project"></i> :
 .pull-left.font150[
 + Dans un Terminal
 
-.center[<img src = "images/terminal.svg" />]
+.center[<img src = "content/media/terminal.svg" />]
 
 ]
 
@@ -160,14 +160,14 @@ x$stop_all()
 # x$uri()
 ```
 
-.center[<img src = "images/bash_profile.svg" />]
+.center[<img src = "content/media/bash_profile.svg" />]
 
 ]
 
 ---
 class: part-slide
 
-#  Comment Réinitialiser <i class="fab fa-r-project"></i> ?<br><img src = "images/thinking-face_1f914.png" />
+#  Comment Réinitialiser <i class="fab fa-r-project"></i> ?<br><img src = "content/media/thinking-face_1f914.png" />
 
 ---
 class: part-slide
@@ -178,7 +178,7 @@ class: part-slide
 
 # Avec `rm(list = ls())`?
 
-.center[<img src = "images/face-screaming-in-fear_1f631.png" />]
+.center[<img src = "content/media/face-screaming-in-fear_1f631.png" />]
 
 .font150[
 
@@ -222,17 +222,17 @@ class: part-slide
 help(rm)
 ```
 
-.center[<img src = "images/rm-doc.png" />]
+.center[<img src = "content/media/rm-doc.png" />]
 
 ---
 class: part-slide
 
-# Comment réinitialiser <i class="fab fa-r-project"></i> ?<br><img src = "images/thinking-face_1f914.png" />
+# Comment réinitialiser <i class="fab fa-r-project"></i> ?<br><img src = "content/media/thinking-face_1f914.png" />
 
 ---
 class: part-slide
 
-# Redémarrer <i class="fab fa-r-project"></i> !<br><img src = "images/grinning-face-with-one-large-and-one-small-eye_1f92a.png" />
+# Redémarrer <i class="fab fa-r-project"></i> !<br><img src = "content/media/grinning-face-with-one-large-and-one-small-eye_1f92a.png" />
 
 ---
 
@@ -262,7 +262,7 @@ class: part-slide
 ]
 
 .pull-right[
-  .center[<img src = "images/restartr.png" />]
+  .center[<img src = "content/media/restartr.png" />]
 ]
         
 ---
@@ -278,7 +278,7 @@ class: part-slide
 
 * `.Rprofile` - contient du code <i class="fab fa-r-project"></i>
 
-.center[<img src = "images/R-startup-dotfiles.svg" width = "60%" />]
+.center[<img src = "content/media/R-startup-dotfiles.svg" width = "60%" />]
 
 ---
 
@@ -286,7 +286,7 @@ class: part-slide
 
 * `.Renviron` - contient des variables d'environnement
 
-.center[<img src = "images/R-startup-environ-zoom.svg" />]
+.center[<img src = "content/media/R-startup-environ-zoom.svg" />]
 
 ---
 
@@ -311,13 +311,13 @@ R_PROFILE_USER=~/.Rprofile # Par défaut
 
 # `.Rprofile`
 
-.center[<img src = "images/R-startup-dotfiles.svg"  width = "70%" />]
+.center[<img src = "content/media/R-startup-dotfiles.svg"  width = "70%" />]
 
 ---
 
 # `.Rprofile`
 
-.center[<img src = "images/R-startup-profile-zoom.svg" />]
+.center[<img src = "content/media/R-startup-profile-zoom.svg" />]
 
 ---
 
@@ -369,7 +369,7 @@ if (interactive()) {
 
 # `.Rprofile` et reproductibilité
 
-.center[<img src = "images/R-startup-profile.svg" width = "70%" />]
+.center[<img src = "content/media/R-startup-profile.svg" width = "70%" />]
 
 Le `.Rprofile` est chargé dans l'environnement à chaque execution d'un processus R (`Rscript` et `R`).
 
@@ -378,11 +378,11 @@ Le `.Rprofile` est chargé dans l'environnement à chaque execution d'un process
 # Mon `.Rprofile`
 
 .pull-left[
-.center[<img src = "images/Rprofile_code.png" width = "100%" />]
+.center[<img src = "content/media/Rprofile_code.png" width = "100%" />]
 ]
 
 .pull-right[
-.center[<img src = "images/Rprofile_console.png" width = "95%" />]
+.center[<img src = "content/media/Rprofile_console.png" width = "95%" />]
 ]
 
 .footnote[
@@ -412,7 +412,7 @@ class: part-slide
 
 #  `setwd(...)` en première ligne ...
 
-.center[<img src = "images/face-screaming-in-fear_1f631.png" />]
+.center[<img src = "content/media/face-screaming-in-fear_1f631.png" />]
 
 .font150[
 
@@ -429,7 +429,7 @@ class: part-slide
 ---
 class: part-slide
 
-# Faisons le Point sur `setwd()` !<br><img src = "images/face-with-uneven-eyes-and-wavy-mouth_1f974.png" />
+# Faisons le Point sur `setwd()` !<br><img src = "content/media/face-with-uneven-eyes-and-wavy-mouth_1f974.png" />
 
 ---
 
@@ -473,7 +473,7 @@ ggsave("scatterplot.png")
 
 # Faisons le Point sur `setwd()` !
 
-.center[<img src = "images/setwd_example.png" width = "80%" />]
+.center[<img src = "content/media/setwd_example.png" width = "80%" />]
 
 ---
 
@@ -489,7 +489,7 @@ if (!file.exists(here("images", "here_ahorst.png"))) {
 ```
 
 .pull-left[
-.center[<img src = "images/here_ahorst.png" />]
+.center[<img src = "content/media/here_ahorst.png" />]
 ]
 
 .pull-right.code60[
@@ -548,7 +548,7 @@ if (!file.exists(here("images", "workflow_ahorst.jpg"))) {
 }
 ```
 
-.center[<img src = "images/workflow_ahorst.jpg" width = "80%"/>]
+.center[<img src = "content/media/workflow_ahorst.jpg" width = "80%"/>]
 
 ---
 

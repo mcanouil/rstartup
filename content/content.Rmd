@@ -1,10 +1,10 @@
 # Les débuts avec <i class="fab fa-r-project"></i>
 
 ```{r, echo = FALSE}
-if (!file.exists(here("images", "r_first_ahorst.png"))) {
+if (!file.exists(here("content", "media", "r_first_ahorst.png"))) {
   download.file(
     url = "https://github.com/allisonhorst/stats-illustrations/raw/master/rstats-artwork/r_first_then.png", 
-    destfile = here("images", "r_first_ahorst.png")
+    destfile = here("content", "media", "r_first_ahorst.png")
   )
 }
 ```
@@ -155,7 +155,7 @@ Lorsque vous démarrez <i class="fab fa-r-project"></i> :
 ```{r, echo = FALSE, eval = FALSE}
 x <- carbon$new("alias R='R --no-save --no-restore-data'")
 x$template <- "cobalt"
-x$carbonate(file = here("images", "bash_profile.svg"))
+x$carbonate(file = here("content", "media", "bash_profile.svg"))
 x$stop_all()
 # x$uri()
 ```
@@ -480,10 +480,10 @@ ggsave("scatterplot.png")
 # L'extension <i class = "fab fa-r-project"></i> `here`
 
 ```{r, echo = FALSE}
-if (!file.exists(here("images", "here_ahorst.png"))) {
+if (!file.exists(here("content", "media", "here_ahorst.png"))) {
   download.file(
     url = "https://github.com/allisonhorst/stats-illustrations/raw/master/rstats-artwork/here.png", 
-    destfile = here("images", "here_ahorst.png")
+    destfile = here("content", "media", "here_ahorst.png")
   )
 }
 ```
@@ -497,7 +497,7 @@ if (!file.exists(here("images", "here_ahorst.png"))) {
 ```{r}
 here::here()
 here::i_am("rstartup.Rmd")
-here::i_am("Rmd/content.Rmd")
+here::i_am("content/content.Rmd")
 fs::dir_tree(here::here(), recurse = FALSE)
 ```
 
@@ -540,10 +540,10 @@ fs::dir_tree(here::here(), recurse = FALSE)
 # Workflow
 
 ```{r, echo = FALSE}
-if (!file.exists(here("images", "workflow_ahorst.jpg"))) {
+if (!file.exists(here("content", "media", "workflow_ahorst.jpg"))) {
   download.file(
     url = "https://github.com/allisonhorst/stats-illustrations/raw/master/other-stats-artwork/workflow.jpg", 
-    destfile = here("images", "workflow_ahorst.jpg")
+    destfile = here("content", "media", "workflow_ahorst.jpg")
   )
 }
 ```

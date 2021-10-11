@@ -2,7 +2,13 @@
 output: github_document
 ---
 
+<!-- README.md is generated from README.Rmd. Please edit that file -->
+
 # rstartup
+
+<!-- badges: start -->
+![License](https://img.shields.io/github/license/mcanouil/rstartup?style=plastic)
+<!-- badges: end -->
 
 This is the repository for the slides about how to have a good start with R (in French).
 

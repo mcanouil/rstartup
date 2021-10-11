@@ -1,5 +1,12 @@
 
+<!-- README.md is generated from README.Rmd. Please edit that file -->
+
 # rstartup
+
+<!-- badges: start -->
+
+[![License](https://img.shields.io/github/license/mcanouil/rstartup)](LICENSE)
+<!-- badges: end -->
 
 This is the repository for the slides about how to have a good start
 with R (in French).

@@ -7,7 +7,7 @@ output: github_document
 # rstartup
 
 <!-- badges: start -->
-![License](https://img.shields.io/github/license/mcanouil/rstartup?style=plastic)
+[![License](https://img.shields.io/github/license/mcanouil/rstartup)](LICENSE)
 <!-- badges: end -->
 
 This is the repository for the slides about how to have a good start with R (in French).
